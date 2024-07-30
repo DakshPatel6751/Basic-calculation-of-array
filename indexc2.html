@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+            background-color: black;
+            font-size: 50px;
+            color: yellow;
+        }
+
+        .main {
+            margin-top: 180px;
+            margin-left: 80px;
+        }
+
+        .circle {
+            display: flex;
+        }
+
+        /* .box1 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(90deg, rgba(30, 36, 0, 1) 0%, rgba(123, 123, 234, 1) 35%, rgba(192, 0, 255, 1) 100%);
+            border-radius: 50%;
+            position: absolute;
+            top: 2%;
+            left: 25%;
+
+
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(90deg, rgba(36, 0, 35, 1) 0%, rgba(234, 173, 123, 1) 35%, rgba(255, 0, 125, 1) 100%);
+            border-radius: 50%;
+            position: absolute;
+            top: 75%;
+            left: 60%;
+
+        } */
+
+        .glass {
+            height: 400px;
+            width: 400px;
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle">
+        <div class="box1"></div>
+        <div class="box2"></div>
+
+    </div>
+    <div class="glass">
+        <!-- <h2>contect form</h2>
+         <div class="input"><h4>Name</h4>
+            <input type="text" placeholder="name">
+            <div class="input1"><h4>Number</h4>
+                <input type="text" placeholder="number">
+    
+    
+
+
+         </div>
+
+    </div>
+    <div class="head">
+       <div class="menu">
+        <a href="">log in</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a href="">log out</a>
+                
+
+        
+    
+       </div>
+
+    </div>
+     <div ><button class="button-33" role="button">Button</button> -->
+        <div class="main">
+            <span id="hrs">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+        </div>
+
+        <script>
+            let hours = document.getElementById('hrs');
+            let minutes = document.getElementById('min');
+            let seconds = document.getElementById('sec');
+
+
+            setInterval(() => {
+                let currentTime = new Date();
+                // hours = currentTime.getHours();
+                // document.getElementById('hrs').innerHTML = hours;
+                // minutes = currentTime.getMinutes();
+                // document.getElementById('min').innerHTML = minutes;
+                // seconds = currentTime.getSeconds();
+                // document.getElementById('sec').innerHTML = seconds;
+
+
+                hours.innerHTML = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+                minutes.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+                seconds.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+
+            }, 1000);
+
+        </script>
+
+
+    </div>
+
+
+</body>
+
+</html>
